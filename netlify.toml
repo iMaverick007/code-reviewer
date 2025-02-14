@@ -1,6 +1,6 @@
 [build]
   base = ""
-  publish = "Frontend/build"
+  publish = "Frontend/dist"
   command = "npm run build"
 
 [functions]
