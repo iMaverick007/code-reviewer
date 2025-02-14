@@ -4,6 +4,7 @@
     "scripts": {
       "build:frontend": "cd Frontend && npm install && npm run build",
       "build:backend": "cd Backend && npm install",
-      "build": "npm run build:frontend && npm run build:backend"
+      "build": "npm run build:frontend && npm run build:backend",
+      "start": "netlify dev"
     }
   }  
