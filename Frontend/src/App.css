@@ -1,0 +1,63 @@
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.editor-container, .review-container {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+
+.editor-container {
+  background-color: #000;
+  position: relative;
+}
+
+.editor-container .review-button {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #9898d8;
+  color: #000;
+  padding: 0.5rem 2rem;
+  border-radius: 0.7rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+
+.editor-container .loader {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  color: white;
+}
+
+.review-container {
+  background-color: #313232;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  overflow-y: auto;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 1rem;
+}
