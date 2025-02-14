@@ -27,6 +27,7 @@ const App = () => {
       setReview(response.data);
       setError("");
     } catch (err) {
+      console.error(err);
       setError("Failed to get code review. Please try again later.");
       setReview("");
     }
