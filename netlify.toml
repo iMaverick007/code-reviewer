@@ -1,6 +1,7 @@
 [build]
-  command = "npm run build"
+  base = "Frontend"
   publish = "Frontend/build"
+  command = "npm run build"
 
 [functions]
   directory = "Backend"
@@ -9,3 +10,6 @@
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
+
+[context.production.environment]
+  VITE_API_URL = "/.netlify/functions"
