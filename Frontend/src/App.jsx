@@ -13,13 +13,16 @@ const App = () => {
   const [review, setReview] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [disabled, setDisabled] = useState(false); 
 
   useEffect(() => {
     prism.highlightAll();
   }, []);
 
   async function reviewCode() {
+    console.log('hi')
     setLoading(true);
+    setDisabled(true); 
     try {
       const response = await axios.post(`${import.meta.env.VITE_API_URL}/ai/get-review`, { code });
       setReview(response.data);
@@ -29,6 +32,7 @@ const App = () => {
       setReview("");
     }
     setLoading(false);
+    setDisabled(false); 
   }
 
   return (
@@ -48,7 +52,13 @@ const App = () => {
             width: "100%",
           }}
         />
-        <button onClick={reviewCode} className="review-button">Review</button>
+        <button 
+          onClick={reviewCode} 
+          className="review-button" 
+          disabled={disabled}
+        >
+          Review
+        </button>
         {loading && <div className="loader">Loading...</div>}
       </div>
       <div className="review-container">
