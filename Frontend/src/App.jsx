@@ -20,7 +20,6 @@ const App = () => {
   }, []);
 
   async function reviewCode() {
-    console.log('hi')
     setLoading(true);
     setDisabled(true); 
     try {
