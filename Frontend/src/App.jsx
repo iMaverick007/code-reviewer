@@ -9,7 +9,7 @@ import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark.css";
 
 const App = () => {
-  const [code, setCode] = useState(`function sum() { return 1 + 1; }`);
+  const [code, setCode] = useState(`function sum() { return a + b; }`);
   const [review, setReview] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
